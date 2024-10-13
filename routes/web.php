@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\usersController;
+//use App\Http\Controllers\usersController;
 
 
 
@@ -19,3 +20,4 @@ Route::get('/Register',function(){
 });
 Route::resource('/products',ProductsController::class);
 Route::resource('/users',usersController::class);
+Route::get('/Add_product',[usersController::class,'Addproduct']);

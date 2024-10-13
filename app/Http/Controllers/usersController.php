@@ -12,10 +12,11 @@ class usersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return'i love bangladesh';
-    }
+    public function Addproduct(){
+    
+        
+            return view('Add_product');
+        }
 
     /**
      * Show the form for creating a new resource.
@@ -41,7 +42,7 @@ class usersController extends Controller
         $user ->password =$request->password;
         $user ->mobile =$request->mobile;
         $user->save();
-        return redirect('/product');
+        return redirect('/Add_product');
     }
 
     /**
@@ -88,4 +89,5 @@ class usersController extends Controller
     {
         //
     }
+   
 }
